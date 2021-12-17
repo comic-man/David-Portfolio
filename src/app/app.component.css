@@ -1,3 +1,117 @@
-body{
-  background: red;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root{
+    --ff-primary: sans-serif;
+    --ff-secondary: monospace;
+
+    --fw-reg: 300;
+    --fw-bold:300;
+
+    --clr-light:#fff;
+    --clr-dark:#303030;
+    --clr-accent:#16e0bd;
+
+    --fs-h1:3rem;
+    --fs-h2:2.25rem;
+    --fs-h3:1.25rem;
+    --fs-body:1rem;
+}
+
+@media (min-width:800px) {
+  :root {
+    --fs-h1:4.5rem;
+    --fs-h2:3.75rem;
+    --fs-h3:1.5rem;
+    --fs-body:1.125rem;
+  }
+}
+
+body {
+  background: #fff;
+  color: 303030;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+strong {
+  font-weight:bold;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2.25rem;
+}
+h3{
+  font-size: 1.25rem;
+}
+
+.section-title{
+  margin-bottom: .25em;
+}
+
+.section-title-intro{
+  font-weight:normal;
+}
+
+.section-title-intro strong{
+  display: block;
+}
+
+.section-subtitle{
+  margin: 0;
+  font-size: 1.25rem;
+}
+.section-title-intro {
+  background:#16e0bd;
+  font-family: 'Courier New', Courier, monospace;
+}
+.section-subtitle-about {
+  background:#16e0bd;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Intro Section */
+nav {
+  display: none;
+}
+
+.intro {
+  position: relative;
+}
+
+@media (min-width:600px) {
+  .intro{
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:
+      "img-title"
+      "img-subtitle";
+    grid-template-columns: min-content max-content;
+  }
+  .intro-img{
+    grid-area: img;
+    min-width: 250px;
+  }
+  .section-title-intro
 }
