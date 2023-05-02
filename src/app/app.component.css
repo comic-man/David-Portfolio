@@ -113,5 +113,7 @@ nav {
     grid-area: img;
     min-width: 250px;
   }
-  .section-title-intro
+  .section-title-intro{
+    display: flex;
+  }
 }
